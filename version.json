@@ -1,1 +1,8 @@
-
+{
+  "project": "NAUTA",
+  "schema_version": 1,
+  "content_version": 1,
+  "updated_at": "2026-07-11T21:00:00+02:00",
+  "data_url": "https://TUO-USERNAME.github.io/nauta-content/nauta_data.json",
+  "min_firmware_version": "0.1.0"
+}
