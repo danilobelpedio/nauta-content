@@ -1,6 +1,13 @@
 {
   "project": "NAUTA",
   "schema_version": 1,
-  "content_version": 1,
-  "pois": []
+  "content_version": 2,
+  "pois": [
+    {
+      "id": "poi_001",
+      "name": "POI di prova",
+      "active": true,
+      "url": "https://example.com/poi_001"
+    }
+  ]
 }
