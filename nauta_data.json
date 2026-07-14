@@ -1,13 +1,116 @@
 {
   "project": "NAUTA",
   "schema_version": 1,
-  "content_version": 2,
-  "pois": [
+  "content_version": 4,
+  "updated_at": "2026-07-14T12:00:00+02:00",
+  "map": {
+    "id": "salerno_master_v1",
+    "width": 2560,
+    "height": 1920,
+    "tile_width": 320,
+    "tile_height": 240,
+    "max_zoom": 3,
+    "coordinate_system": "normalized"
+  },
+  "zones": [
+    {
+      "id": "zone_centro_storico",
+      "name": "Centro Storico",
+      "active": true
+    },
+    {
+      "id": "zone_stazione",
+      "name": "Stazione",
+      "active": true
+    }
+  ],
+  "locations": [
+    {
+      "id": "location_001",
+      "name": "Galleria del Centro",
+      "active": true,
+      "address": "Via dei Mercanti, Salerno",
+      "geo": {
+        "lat": 40.680912,
+        "lon": 14.759384
+      },
+      "map": {
+        "x": 0.3825,
+        "y": 0.514
+      },
+      "zone_id": "zone_centro_storico"
+    }
+  ],
+  "items": [
+    {
+      "id": "artwork_001",
+      "type": "artwork",
+      "name": "Il Viaggio",
+      "active": true,
+      "author": "Mario Rossi",
+      "description_short": "Opera dedicata al viaggio e alla scoperta.",
+      "url": "https://artfestivalsalerno.it/opere/il-viaggio",
+      "stamp_code": "A7F2K9"
+    },
     {
       "id": "poi_001",
-      "name": "POI prima installazione",
+      "type": "poi",
+      "name": "Duomo di Salerno",
       "active": true,
-      "url": "https://example.com/poi_001"
+      "description_short": "Uno dei principali luoghi storici della città.",
+      "stamp_code": "D4M8P2"
+    }
+  ],
+  "placements": [
+    {
+      "id": "placement_001",
+      "item_id": "artwork_001",
+      "location_id": "location_001",
+      "active": true
+    },
+    {
+      "id": "placement_002",
+      "item_id": "poi_001",
+      "location_id": "location_001",
+      "active": true
+    }
+  ],
+  "itineraries": [
+    {
+      "id": "itinerary_art_festival",
+      "name": "Art Festival Salerno",
+      "active": true,
+      "description_short": "Segui le opere e gli eventi dell'Art Festival.",
+      "menu_label": "Segui l'arte di Salerno",
+      "icon_key": "art",
+      "theme_key": "festival"
+    },
+    {
+      "id": "itinerary_meraviglie",
+      "name": "Meraviglie salernitane",
+      "active": true,
+      "description_short": "Scopri i principali luoghi storici e panoramici.",
+      "menu_label": "Scopri le meraviglie",
+      "icon_key": "landmark",
+      "theme_key": "heritage"
+    }
+  ],
+  "itinerary_items": [
+    {
+      "id": "itinerary_item_001",
+      "itinerary_id": "itinerary_art_festival",
+      "item_id": "artwork_001",
+      "active": true,
+      "display_order": 10,
+      "featured": true
+    },
+    {
+      "id": "itinerary_item_002",
+      "itinerary_id": "itinerary_meraviglie",
+      "item_id": "poi_001",
+      "active": true,
+      "display_order": 10,
+      "featured": true
     }
   ]
 }
